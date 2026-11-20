@@ -1,47 +1,26 @@
 # Profile upgrade plan
 
-Goal: a visitor to https://github.com/pascalandy understands in 10 seconds who Pascal is and what he builds
-
-Done when:
-
-- The bio and the profile README say what Pascal builds today
-- The profile shows 4 pins, and each pinned README is clear to a stranger on its first screen, with its illustration
-- The banner and the 4 close-ups look like one family
-- mixtape is public, with no secret and no private machine detail
-
-Out of scope: repos that are not pinned, and any automation of the profile
+Help a visitor to https://github.com/pascalandy see who Pascal is and what he builds in 10 seconds.
 
 ## Decisions
 
-- Pins, in this order: nicely, mixtape, skills, pascalandy-blog-paper. Why: they are the current work. uao is unpinned
-- Bio: "Building CLI tools and agent skills that humans and AI agents run equally well · Montréal"
-- All public text is in English. Why: the audience is international. The skills repo already links a French guide
-- Profile README: short and plain, after charliermarsh and steipete. A banner, 2 intro sentences, a "Start Here" list of the 4 pins with one line each, one "Also" line (pi-journey, uao, html-publish), and links to the blog and the French guide of skills. No badges and no stats widgets. Why: minimal profiles read as professional for tool builders
-- Images: AI-generated, 2:1, so that one file is both the README hero and the 1280x640 social preview. One version only, because cream paper reads well on the dark theme
-- Image style, the same words for each image: "precise isometric technical illustration, fine ink linework on warm cream paper, flat muted colors (sage, slate, oak), a single warm amber accent on lit windows and the human moment, true 30-degree isometric projection, no perspective." No text, letters, numbers, logos or UI. One adult man, small or from behind, never a recognizable portrait
-- Banner: a tall, narrow tower-house. Each floor is one pin: a nicely workshop with tools and a server rack, a mixtape listening room with records and cassettes, a skills library, and a blog writing desk. On the roof, the man from behind, in the amber light. Each close-up is a zoom on one floor. Why: one picture shows all the work, and the close-ups keep the family
+- Pin `nicely`, `mixtape`, `skills`, and `pascalandy-blog-paper` in that order
+- Write public text in English
+- Keep the profile README to a banner, 2 intro sentences about what Pascal builds, and a **Start Here** list of only the 4 pins in pin order. Give each repo one line with its link and what it does. Put the blog link and the French guide already linked from `skills` on their matching lines
+- Generate 5 images with AI. Export each as a 1280 × 640 PNG under 1 MB for use in both a README and its repo's social preview
+- Reuse the prompt "precise isometric technical illustration, fine ink linework on warm cream paper, flat muted colors (sage, slate, oak), a single warm amber accent on lit windows and the human moment, true 30-degree isometric projection, no perspective" for all 5 images. Keep text, letters, numbers, logos, and UI out of the art
+- Show a tall, narrow tower-house with 4 floors. In pin order from bottom to top, show a workshop with tools and a server rack, a listening room with records and cassettes, a library, and a writing desk. Show one adult man from behind on the roof in amber light. Frame each close-up as a zoom into its matching floor
 
 ## Steps
 
-Pascal does the steps marked "Pascal". An agent does the other steps. Each agent step that changes a repo is one PR in that repo.
+Use one PR per repo for the file changes. All 5 repos belong to `pascalandy`.
 
-1. Pascal: run `gh auth refresh -h github.com -s user` and approve in the browser. Why: an agent needs this scope to change the bio
-2. Agent: set the bio with `gh api -X PATCH user -f bio="..."`
-3. Pascal: pin nicely, skills and pascalandy-blog-paper, in this order, and unpin uao. Why: GitHub has no API for profile pins
-4. Agent: give the 4 pinned repos an English description and topics, and set the blog repo homepage to https://blog.pascalandy.com
-5. Agent: make mixtape ready to go public, in one PR:
-   - Rewrite the README for a stranger: what it does, how to install it, a first sync
-   - Remove machine names, local paths and internal milestones from every tracked file
-   - Add the MIT license
-6. Agent: before the visibility change, scan the full mixtape history, issues and PRs for secrets and private details. Report only pass or fail on GitHub
-7. Pascal: if step 6 passes, make mixtape public and pin it second
-8. Agent: make 3 static HTML mockups of the profile README. Pascal picks one
-9. Agent: write `README.md` in this repo from the picked mockup, with the banner slot empty. Caution: GitHub shows a non-empty `README.md` on the profile at once
-10. Agent: rewrite the top of each pinned README: hero slot, one-line pitch, install, a minimal example
-11. Agent: make banner drafts. Pascal picks one. The agent adds it to `README.md`
-12. Agent: make close-up drafts from the picked banner. Pascal picks one for each floor. The agent adds each one to its repo as `docs/assets/hero.png`
-13. Pascal: upload the same 5 files as social previews in each repo's Settings: each close-up on its pin, and the banner on this repo. Why: GitHub has no API for this upload
-
-## Later
-
-Update this plan when a pin changes: a new floor for the banner, a new close-up, and a new "Start Here" line
+1. **Pascal**. Sign in to `gh` as `pascalandy`, run `gh auth refresh -h github.com -s user`, and approve the request in the browser
+2. **Agent**. Run `gh api --hostname github.com user --jq .login`. If it returns `pascalandy`, run `gh api --hostname github.com -X PATCH user -f 'bio=Building CLI tools and agent skills that humans and AI agents run equally well · Montréal' --jq .bio`. Check that the returned bio matches
+3. **Agent**. Draft 3 local HTML mockups of the profile README using `charliermarsh` and `steipete` as layout references. Pascal picks one
+4. **Agent**. Draft the banner for the chosen layout. After Pascal picks a banner, use it as the reference for the 4 close-ups. Pascal picks one per floor. Export the 5 chosen images to the specs above
+5. **Agent**. In each pin, save the close-up as `docs/assets/hero.png` and show it at the top of `README.md`. Follow it with a one-line pitch, setup instructions, and one working example. Check that the image renders and the example works. For `mixtape`, show a first sync, add the MIT license, and remove secrets, private details, and internal milestones from all tracked files in the same PR
+6. **Agent**. After the `mixtape` PR merges, check all Git history, including every branch, tag, and PR commit. Check issues, PRs, comments, releases, and [other content GitHub will make public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-from-private-to-public). If you find a secret, a private detail, or anything you cannot review, the check fails. Report only `pass` or `fail` on GitHub
+7. **Pascal**. If anything has changed since the review, repeat step 6. With a passing review, make `mixtape` public under **Settings** → **Danger Zone** → **Change visibility**. Check that `mixtape` opens when signed out. On your profile, choose only the 4 repos under **Customize your pins**, save, and drag them into the order above
+8. **Agent**. Add the chosen layout as the root `README.md` in `pascalandy/pascalandy`, with the banner at `docs/assets/banner.png` in the same PR. After merge, open the profile signed out and check the bio, 4 pins, banner, and all README links
+9. **Pascal**. In each repo, use **Settings** → **Social preview** → **Edit** → **Upload an image**. Use the banner for `pascalandy/pascalandy` and each close-up for its pin. Check each preview shows the right image
