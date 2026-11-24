@@ -1,6 +1,6 @@
-![Isometric drawing of a three-floor tower-house: a workshop, a library and a writing room, with a man on the roof at sunset](docs/assets/banner.png)
+![Isometric drawing of a desk at night: a large monitor with six agent terminals running in parallel, a laptop on its left, a mechanical keyboard, a mouse and three stacked mini-PCs glowing in blue and cyan](docs/assets/banner-v2b.png)
 
-Hi, I'm Pascal. I build command-line tools and agent skills that humans and AI agents run equally well.
+Hi, I'm Pascal. I'm a security consultant in regulated finance, and I build command-line tools and agent skills that humans and AI agents run equally well.
 
 Start with these:
 
