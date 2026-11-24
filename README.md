@@ -1,4 +1,4 @@
-![Isometric drawing of a three-floor tower-house on a rocky lakeshore among pines and birches: a home gym on the ground floor, a library in the middle, a man seen from behind at his workstation on the top floor with a large monitor of terminals, a laptop, a mechanical keyboard and three stacked mini-PCs, and a roof terrace with plants and chairs](docs/assets/banner-v4c.png)
+![Isometric drawing of a tall, narrow tower-house on a granite outcrop by a lake, among pines and birches: a home gym on the ground floor, a double-height library above it, and on the roof terrace, under a pergola, a man seen from behind at his workstation with a large monitor of terminals, a laptop, a mechanical keyboard and three stacked mini-PCs](docs/assets/banner-v5c.png)
 
 Hi, I'm Pascal. I'm a security consultant in regulated finance, and I build command-line tools and agent skills that humans and AI agents run equally well.
 
