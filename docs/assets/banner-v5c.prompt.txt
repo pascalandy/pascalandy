@@ -1,0 +1,13 @@
+Deliverable: an edit of the reference image, a wide GitHub profile banner, 2:1, filled edge to edge.
+Style: precise isometric technical illustration, fine ink linework on warm cream paper, flat muted colors (sage, slate, oak), a single warm amber accent on lit windows and the human moment, true 30-degree isometric projection, no perspective.
+Keep the tower-house exactly as it is: tall and narrow, filling most of the frame height, with the home gym on the ground floor, the double-height library with its tall bookshelves and rolling ladder above it, the roof terrace with the oak pergola, the workstation under it (the large monitor of four abstract amber terminal panes, the grey laptop with no logo, the mechanical keyboard, the mouse on its slate mat, the three stacked mini-PCs with status LEDs) and the man seated at the desk, seen from behind, his face not visible, in the amber screen glow. Keep the pipes and boxes on the right wall and the fieldstone foundation.
+Change the framing and the terrain:
+- move the tower to the left third of the frame, so the lake opens wider on the viewer's right
+- the tower stands on a low outcrop of pale grey granite at the edge of a calm lake, the rounded rock slabs drawn in the same isometric projection as the tower; its fieldstone foundation is set into the rock
+- a narrow footpath of flat stones climbs the slabs from the bottom edge of the frame to the steps and the door
+- low blueberry shrubs, ferns and tall grass grow in the cracks of the rock and overlap the foundation and the lower corners of the walls
+- a few white pines and birches on the outcrop, at the right scale: the tallest one beside the tower reaches about the top of the library, never the roof
+- the lake shore runs diagonally along the isometric axis from the foot of the outcrop toward the right, with a small wooden dock on the water, then forested hills and soft distant hills under a pale warm sky with a few flat clouds
+- the rock, the water, the dock and the trees share the tower's projection, the same light from the left and the same ink linework, so the landscape and the tower form one drawing, not a backdrop behind it
+Keep unchanged: the same warm paper tone, the same ink linework and the same muted palette, with amber only on lit windows, screen glow and the man.
+Constraints: no readable text, letters, numbers or words anywhere, including on the screens and book spines; terminal content is abstract thin lines only. No brand logos, no apple logo, no trademarks, no watermark. No dark mode, no neon, no blue glow. No recognizable face.
