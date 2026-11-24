@@ -8,8 +8,8 @@ Help a visitor to https://github.com/pascalandy see who Pascal is and what he bu
 - Write public text in English
 - Keep the profile README to a banner, 2 intro sentences about what Pascal builds, and a **Start Here** list of only the 3 pins in pin order. Give each repo one line with its link and what it does. Put the blog link and the French guide already linked from `skills` on their matching lines
 - Generate 4 images with AI: 1 banner and 3 close-ups. Export each as a 1280 × 640 PNG under 1 MB for use in both a README and its repo's social preview
-- Reuse the prompt "precise isometric technical illustration, fine ink linework on warm cream paper, flat muted colors (sage, slate, oak), a single warm amber accent on lit windows and the human moment, true 30-degree isometric projection, no perspective" for all 4 images. Keep text, letters, numbers, logos, and UI out of the art
-- Show a tall, narrow tower-house with 3 floors. In pin order from bottom to top, show a workshop with tools and a server rack, a library, and a writing desk. Show one adult man from behind on the roof in amber light. Frame each close-up as a zoom into its matching floor
+- Use the dark isometric desk scene of `docs/assets/banner-v2b.prompt.txt` as the style for all 4 images: cold palette, screen and LED glow, true 30-degree isometric projection, no perspective. Keep text, letters, numbers, logos, and UI out of the art. It replaces the 2026-11-20 sepia tower-house
+- Show a close-up of Pascal's desk: a 32-inch monitor with agent terminals in parallel, a mechanical keyboard, a wireless mouse, a 16-inch laptop on the left and three mini-PCs. Frame each close-up as a zoom into one part of the desk
 
 ## Steps
 
@@ -26,4 +26,4 @@ Use one PR per repo for the file changes. All 4 repos belong to `pascalandy`.
 
 ## Later
 
-To add a pin, add a floor to the banner, make its close-up, and add its line to **Start Here**
+To add a pin, make its close-up from the desk scene and add its line to **Start Here**
