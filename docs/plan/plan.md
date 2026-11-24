@@ -9,7 +9,7 @@ Help a visitor to https://github.com/pascalandy see who Pascal is and what he bu
 - Keep the profile README to a banner, 2 intro sentences about what Pascal builds, and a **Start Here** list of only the 3 pins in pin order. Give each repo one line with its link and what it does. Put the blog link and the French guide already linked from `skills` on their matching lines
 - Generate 4 images with AI: 1 banner and 3 close-ups. Export each as a 1280 × 640 PNG under 1 MB for use in both a README and its repo's social preview
 - Reuse the prompt "precise isometric technical illustration, fine ink linework on warm cream paper, flat muted colors (sage, slate, oak), a single warm amber accent on lit windows and the human moment, true 30-degree isometric projection, no perspective" for all 4 images. Keep text, letters, numbers, logos, and UI out of the art
-- Show a tall, narrow tower-house with 3 floors. In pin order from bottom to top, show a workshop with Pascal's real workstation (a large monitor of terminals, a laptop, a mechanical keyboard and three mini-PCs), a library, and a writing desk. Show one adult man from behind on the roof in amber light. Frame each close-up as a zoom into its matching floor
+- Show a tall, narrow tower-house with 3 floors and a roof terrace, standing in nature that fills the whole frame, such as forest, hills and water, in the same palette and linework. From bottom to top, show a home gym, a library, and Pascal's real workstation (a large monitor of terminals, a laptop, a mechanical keyboard and three mini-PCs). Show one adult man from behind or in three-quarter view, seated at that desk in amber light. Give the roof terrace plants, a railing and seats. Frame each close-up as a zoom into its matching floor
 
 ## Steps
 
