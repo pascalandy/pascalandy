@@ -1,0 +1,46 @@
+{
+  "command": "uv run image_creator.py generate --size 1280x640 --prompt-file banner-v2a.prompt.txt --out banner-v2a.png -v",
+  "skill": "image-creator",
+  "route": "Codex plan (Images 2.6, model and quality fixed by OpenAI)",
+  "date": "2026-11-24",
+  "prompt_file": "banner-v2a.prompt.txt",
+  "receipt": {
+    "backend": "plan",
+    "outputs": [
+      "banner-v2a.png"
+    ],
+    "request": {
+      "controller": "gpt-6.1-terra",
+      "note": "the plan backend fixes model, quality, and size"
+    },
+    "target_size": "1280x640",
+    "calls": [
+      {
+        "seconds": 34.5,
+        "prompt_verbatim": true,
+        "background": "opaque"
+      }
+    ],
+    "files": [
+      {
+        "path": "banner-v2a.png",
+        "width": 1280,
+        "height": 640,
+        "mode": "RGB",
+        "bytes": 831919
+      }
+    ]
+  },
+  "answer": {
+    "ok": true,
+    "files": [
+      {
+        "path": "banner-v2a.png",
+        "width": 1280,
+        "height": 640
+      }
+    ],
+    "backend": "plan"
+  },
+  "redacted": "receipt.calls[].source, a local file path, removed before commit because this repo is public"
+}
